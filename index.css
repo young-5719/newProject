@@ -1,0 +1,102 @@
+*{
+    list-style: none;
+}
+body{
+    margin: 0;
+    background-color: #fff;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loadProductsBtn {
+    display: none;
+}
+
+#basketList>li{
+    display: flex;
+    
+}
+#selectedList{
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    /* position: relative; 모든 요소가 하나의 레이아웃에 포함되어서 영향을 주는 것 */
+    /* position: absolute; */
+    /* 해당 요소만 존재하는 독립적인 레이아웃을 갖는다. */
+    transition: all;
+    transition-duration: 100ms;
+
+    position: sticky;
+    bottom: 0;
+    overflow: auto;
+    border-radius: 4px;
+}
+.resize{
+    /* height: 30px !important; */
+    /* opacity: 0.1    // 투명도, 투명해지ㅣ 때문에 제일 밑에의 요소가 눌리지 않는다. */
+    /* display: none;  // 수치가 없으면 애니메이션 대상이 아니다.  */
+    /* height: 30px !important; width: 150px !important; */
+    /* bottom: -170px !important; */
+    /* 요소를 직접 움직이는 것은 렌더링에 무리를 줄 수 있다. */
+    transform: translateY(calc(100% - 20px));
+    /* transform : 요소 전체에 영향을 주지 않고 형태를 변형하는 방식의 렌더링 */
+    /* 100% == bottom */
+}
+table, td, th{
+    border-collapse: collapse;
+    /* border-collapse: separate;default; border를 분리 시키겠다. */
+}
+
+#resultTable{
+    width: 100%;
+    padding: 5px;
+}
+#resultTable>thead>tr>th{
+    border: .5px solid black;
+}
+#resultTable>tfoot{
+    text-align: end;
+}
+#resultTable>thead>tr>th{
+    border-bottom: 1px solid gray;
+}
+
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#productEx{
+    display: none !important;
+}
+
+#productList li {
+    width: calc(20% - 16px); /* 한 줄에 5개씩 배치 (간격을 고려한 계산) */
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    #productList li {
+        width: calc(25% - 16px); /* 화면이 좁아지면 한 줄에 4개 */
+    }
+}
+
+@media (max-width: 768px) {
+    #productList li {
+        width: calc(33.33% - 16px); /* 화면이 더 좁아지면 한 줄에 3개 */
+    }
+}
+
+@media (max-width: 480px) {
+    #productList li {
+        width: 100%; /* 화면이 좁아지면 한 줄에 1개 */
+    }
+}
+
+#divLi {
+    border: 1px solid #c9c5c5;
+
+}
+

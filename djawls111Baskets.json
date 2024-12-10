@@ -1,0 +1,27 @@
+{
+    "user_id" : "djawls111",
+    "baskets" : [
+    {
+        "user_id" : "djawls111",
+        "num": 2,
+        "title": "BCAA 아미노산 부스터",
+        "cnt": 1,
+        "price": 22900,
+        "total": 22900
+    },
+    {
+        "num": 4,
+        "title": "퓨어 카보린",
+        "cnt": 2,
+        "price": 19900,
+        "total": 39800
+    },
+    {
+        "num": 6,
+        "title": "프리워크아웃",
+        "cnt": 1,
+        "price": 59800,
+        "total": 59800
+    }
+    ]
+}
